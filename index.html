@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Akhilesh Maurya – Solution Engineer specializing in Elastic Stack, data pipelines, and enterprise observability. Based in Mumbai, Maharashtra.">
+  <meta name="keywords"
+    content="Akhilesh Maurya, Solution Engineer, Elasticsearch, Logstash, Kibana, Full Stack Developer, Mumbai">
+  <meta name="author" content="Akhilesh Maurya">
+  <meta property="og:title" content="Akhilesh Maurya | Solution Engineer & Data Infrastructure Specialist">
+  <meta property="og:description"
+    content="Portfolio of Akhilesh Maurya – specializing in enterprise observability, Elastic Stack, and scalable data pipelines.">
+  <meta property="og:type" content="website">
+  <title>Akhilesh Maurya | Solution Engineer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-spinner"></div>
+      <p class="preloader-text">Loading...</p>
+    </div>
+  </div>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow"></div>
+
+  <!-- Noise Texture Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Particles Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">AM<span>.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li>
+          <a href="assets/Akhilesh_Maurya_Resume.pdf" download class="nav-resume">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Resume
+          </a>
+        </li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero section" id="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge reveal">
+          <span class="pulse-dot"></span>
+          Available for Opportunities
+        </div>
+        <p class="hero-greeting reveal reveal-delay-1">Hello, I'm</p>
+        <h1 class="hero-name reveal reveal-delay-2">
+          Akhilesh <span class="gradient-text">Maurya</span>
+        </h1>
+        <div class="hero-title-line reveal reveal-delay-3">
+          <span id="typed-text"></span><span class="typed-cursor">|</span>
+        </div>
+        <p class="hero-description reveal reveal-delay-4">
+          Architecting scalable data pipelines and enterprise observability solutions with the Elastic Stack. Turning
+          complex data into actionable insights.
+        </p>
+        <div class="hero-actions reveal reveal-delay-4">
+          <a href="#contact" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            Get in Touch
+          </a>
+          <a href="#experience" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+            View Work
+          </a>
+        </div>
+        <div class="hero-stats reveal reveal-delay-5">
+          <div class="stat-item">
+            <div class="stat-number" data-target="2" data-suffix="+">0</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="5" data-suffix="+">0</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="8.18" data-suffix="">0</div>
+            <div class="stat-label">CGPA Score</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-image-wrapper">
+          <div class="hero-image-glow"></div>
+          <div class="hero-image-frame">
+            <img src="assets/profile.png" alt="Akhilesh Maurya - Solution Engineer" id="profile-image">
+          </div>
+          <!-- Floating Badges -->
+          <div class="orbit-badge orbit-badge-1">
+            <span class="badge-icon">🔍</span> Elasticsearch
+          </div>
+          <div class="orbit-badge orbit-badge-2">
+            <span class="badge-icon">☁️</span> AWS Cloud
+          </div>
+          <div class="orbit-badge orbit-badge-3">
+            <span class="badge-icon">🤖</span> AI & MLOps
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// Who I Am</span>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Passionate about building data-driven solutions that make a real impact.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="about-code-block">
+            <div class="code-header">
+              <span class="code-dot"></span>
+              <span class="code-dot"></span>
+              <span class="code-dot"></span>
+            </div>
+            <div class="code-line"><span class="bracket">{</span></div>
+            <div class="code-line">&nbsp;&nbsp;<span class="key">"name"</span>: <span class="value">"Akhilesh
+                Maurya"</span>,</div>
+            <div class="code-line">&nbsp;&nbsp;<span class="key">"role"</span>: <span class="value">"Solution
+                Engineer"</span>,</div>
+            <div class="code-line">&nbsp;&nbsp;<span class="key">"location"</span>: <span class="value">"Mumbai,
+                India"</span>,</div>
+            <div class="code-line">&nbsp;&nbsp;<span class="key">"company"</span>: <span class="value">"QualityKiosk
+                Technologies"</span>,</div>
+            <div class="code-line">&nbsp;&nbsp;<span class="key">"specialization"</span>: <span class="bracket">[</span>
+            </div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Elastic Stack"</span>,</div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Data Pipelines"</span>,</div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Enterprise Observability"</span></div>
+            <div class="code-line">&nbsp;&nbsp;<span class="bracket">]</span>,</div>
+            <div class="code-line">&nbsp;&nbsp;<span class="key">"passion"</span>: <span class="value">"Turning data
+                into insights"</span></div>
+            <div class="code-line"><span class="bracket">}</span></div>
+          </div>
+        </div>
+
+        <div class="about-text reveal reveal-delay-2">
+          <h3>Engineering Solutions, Not Just Code</h3>
+          <p>
+            I'm a Solution Engineer based in Mumbai, specializing in enterprise observability and data infrastructure. I
+            work at the intersection of the <strong>Elastic Stack</strong> and complex banking systems, designing
+            scalable pipelines that process and analyze massive data streams in real time.
+          </p>
+          <p>
+            My expertise spans from architecting ELK-based monitoring platforms to implementing secure enterprise
+            integrations with SAML and RBAC. I'm passionate about AI/MLOps and constantly exploring how AI agents and
+            RAG systems can enhance data-driven decision making.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <span class="icon">⚡</span>
+              <h4>Fast Learner</h4>
+              <p>Quick to adapt to new technologies and frameworks</p>
+            </div>
+            <div class="highlight-card">
+              <span class="icon">🎯</span>
+              <h4>Problem Solver</h4>
+              <p>Focused on delivering actionable solutions</p>
+            </div>
+            <div class="highlight-card">
+              <span class="icon">🔒</span>
+              <h4>Security First</h4>
+              <p>SAML, RBAC & enterprise-grade security</p>
+            </div>
+            <div class="highlight-card">
+              <span class="icon">📊</span>
+              <h4>Data Driven</h4>
+              <p>Insights that optimize performance</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// What I Know</span>
+        <h2 class="section-title">Skills & Expertise</h2>
+        <p class="section-subtitle">Technologies and tools I work with to build robust solutions.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal reveal-delay-1">
+          <div class="skill-card-icon">🤖</div>
+          <h3>AI & MLOps</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">RAG</span>
+            <span class="skill-tag">LLM Evaluations</span>
+            <span class="skill-tag">AI Agents</span>
+            <span class="skill-tag">Arize Phoenix</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal reveal-delay-2">
+          <div class="skill-card-icon">🔍</div>
+          <h3>Elastic Stack</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Elasticsearch</span>
+            <span class="skill-tag">Vector Search</span>
+            <span class="skill-tag">Logstash</span>
+            <span class="skill-tag">Kibana</span>
+            <span class="skill-tag">Index Management</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal reveal-delay-3">
+          <div class="skill-card-icon">☁️</div>
+          <h3>Cloud & Infrastructure</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">System Monitoring</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal reveal-delay-1">
+          <div class="skill-card-icon">💻</div>
+          <h3>Languages & Databases</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal reveal-delay-2">
+          <div class="skill-card-icon">🔒</div>
+          <h3>Security & Access</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">SAML</span>
+            <span class="skill-tag">RBAC</span>
+            <span class="skill-tag">Principal Mapping</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal reveal-delay-3">
+          <div class="skill-card-icon">🌐</div>
+          <h3>Web Technologies</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Redux</span>
+            <span class="skill-tag">Node.js</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// Where I've Worked</span>
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">My professional journey building enterprise-grade solutions.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Experience 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Feb 2025 – Present</span>
+            <h3>Solution Engineer</h3>
+            <p class="company">QualityKiosk Technologies Pvt. Ltd.</p>
+            <p class="location">📍 Mumbai, Maharashtra</p>
+            <span class="project-label">Core banking LOS Dedupe System</span>
+            <ul>
+              <li>Architected and optimized data infrastructure for the core banking Dedupe platform, ensuring high
+                availability, rapid query response, and seamless large-scale data processing.</li>
+              <li>Designed and deployed scalable data ingestion pipelines using Logstash and custom Elasticsearch Ingest
+                Pipelines for complex banking logs.</li>
+              <li>Built comprehensive, real-time Kibana dashboards to visualize application health, track performance
+                metrics, and monitor deduplication success rates.</li>
+              <li>Reconfigured SAML-based authentication, role mapping, and principal patterns during a critical
+                corporate domain migration, securing sensitive financial data.</li>
+              <li>Engineered custom Elasticsearch Watcher rules with SMTP integration for real-time alerts, reducing
+                incident MTTR significantly.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Sep 2023 – Apr 2024</span>
+            <h3>SDE Intern</h3>
+            <p class="company">WWD Foundation</p>
+            <p class="location">📍 Remote</p>
+            <ul>
+              <li>Designed, developed, and maintained full-fledged responsive websites with successful deployment and
+                hosting on AWS infrastructure.</li>
+              <li>Collaborated on backend development utilizing WordPress and MySQL for robust content management and
+                optimized database configuration.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// What I've Built</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Showcasing key projects that demonstrate my skills and expertise.</p>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-icon">🤖</div>
+          <h3>AI Agent & Evaluation Platform</h3>
+          <p>Built an AI agent with integrated Arize Phoenix tracing to monitor execution paths and evaluate
+            performance. Observed prompt effectiveness and retrieval quality through step-by-step traces.</p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>AI Agents</span>
+            <span>Arize Phoenix</span>
+            <span>RAG</span>
+            <span>LLM Eval</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-code">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+              Code
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-icon">🏠</div>
+          <h3>Property Management Platform</h3>
+          <p>Full-stack MERN property listing platform with Firebase authentication. Features dynamic React.js UI
+            components with Redux Toolkit for efficient global state management and seamless data flow.</p>
+          <div class="project-tech">
+            <span>React.js</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+            <span>Redux</span>
+            <span>Firebase</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-code">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+              Code
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-live">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              Live
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-3">
+          <div class="project-icon">📊</div>
+          <h3>Core Banking LOS Dedupe System</h3>
+          <p>Enterprise-grade loan origination deduplication system with ELK-based monitoring, real-time dashboards,
+            SAML security, and custom alerting infrastructure for banking operations.</p>
+          <div class="project-tech">
+            <span>Elasticsearch</span>
+            <span>Logstash</span>
+            <span>Kibana</span>
+            <span>SAML</span>
+            <span>Watcher</span>
+          </div>
+
+        </div>
+
+        <div class="project-card reveal reveal-delay-4">
+          <div class="project-icon">🌐</div>
+          <h3>Responsive Web Applications</h3>
+          <p>Designed and deployed responsive websites on AWS for the WWD Foundation, featuring WordPress CMS with MySQL
+            backend for optimized content management and database configuration.</p>
+          <div class="project-tech">
+            <span>AWS</span>
+            <span>WordPress</span>
+            <span>MySQL</span>
+            <span>HTML/CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-live">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              Live
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION & CERTIFICATIONS ===== -->
+  <section class="education section" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// My Background</span>
+        <h2 class="section-title">Education & Certifications</h2>
+        <p class="section-subtitle">Academic foundation and continuous learning journey.</p>
+      </div>
+
+      <div class="education-grid">
+        <div class="education-card reveal reveal-delay-1">
+          <div class="edu-icon">🎓</div>
+          <h3>Nirmala Memorial Foundation College</h3>
+          <p class="degree">BSc in Computer Science</p>
+          <p class="edu-date">Jul 2021 – Jun 2024 &nbsp;|&nbsp; Mumbai</p>
+          <span class="cgpa">CGPA: 8.18</span>
+        </div>
+
+        <div class="education-card reveal reveal-delay-2">
+          <div class="edu-icon">📜</div>
+          <h3>Aptech Learning, Mumbai</h3>
+          <p class="degree">Database & Programming Certification</p>
+          <p class="edu-date">MySQL • MongoDB • Python</p>
+          <span class="cgpa">Certified ✓</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="section-header reveal">
+          <span class="section-label">// Let's Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">Have a project in mind or want to discuss opportunities? I'd love to hear from
+            you.</p>
+        </div>
+
+        <div class="contact-links reveal reveal-delay-1">
+          <a href="tel:+918081062922" class="contact-link" id="contact-phone">
+            <span class="contact-icon">📱</span>
+            +91 8081062922
+          </a>
+          <a href="https://linkedin.com/in/" class="contact-link" target="_blank" rel="noopener noreferrer"
+            id="contact-linkedin">
+            <span class="contact-icon">💼</span>
+            LinkedIn
+          </a>
+          <a href="https://github.com/" class="contact-link" target="_blank" rel="noopener noreferrer"
+            id="contact-github">
+            <span class="contact-icon">🐙</span>
+            GitHub
+          </a>
+          <a href="mailto:akmauryaa314@gmail.com" class="contact-link" id="contact-location">
+            <span class="contact-icon">📍</span>
+            Mumbai, Maharashtra
+          </a>
+        </div>
+
+        <a href="mailto:akmauryaa314@gmail.com" class="contact-email-btn reveal reveal-delay-2" id="contact-email-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          akmauryaa314@gmail.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed & Built with <span class="heart">♥</span> by Akhilesh Maurya &copy; 2025</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
