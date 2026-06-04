@@ -1,3 +1,57 @@
+// ===== Theme Management =====
+const themeToggle = document.getElementById('theme-toggle');
+const profileImage = document.getElementById('profile-image');
+const htmlElement = document.documentElement;
+
+// Theme configuration
+const THEME_KEY = 'portfolio-theme';
+const LIGHT_THEME = 'light';
+const DARK_THEME = 'dark';
+const PROFILE_LIGHT = 'assets/profile.png';
+const PROFILE_DARK = 'assets/profile-dark.png';
+
+// Global variables for particle colors
+let particleFillColor = '29, 78, 216'; // Light theme default
+let particleStrokeColor = '29, 78, 216';
+
+function updateThemeColors(theme) {
+  if (theme === DARK_THEME) {
+    particleFillColor = '108, 99, 255';
+    particleStrokeColor = '108, 99, 255';
+  } else {
+    particleFillColor = '29, 78, 216';
+    particleStrokeColor = '29, 78, 216';
+  }
+}
+
+function setTheme(theme) {
+  if (theme === DARK_THEME) {
+    htmlElement.setAttribute('data-theme', DARK_THEME);
+    if (profileImage) profileImage.src = PROFILE_DARK;
+  } else {
+    htmlElement.removeAttribute('data-theme');
+    if (profileImage) profileImage.src = PROFILE_LIGHT;
+  }
+  localStorage.setItem(THEME_KEY, theme);
+  updateThemeColors(theme);
+}
+
+// Initialize Theme
+const savedTheme = localStorage.getItem(THEME_KEY);
+// Default to light if not saved, otherwise use saved preference
+if (savedTheme === DARK_THEME) {
+  setTheme(DARK_THEME);
+} else {
+  setTheme(LIGHT_THEME); // Default is light
+}
+
+themeToggle?.addEventListener('click', () => {
+  const currentTheme = htmlElement.getAttribute('data-theme') === DARK_THEME ? DARK_THEME : LIGHT_THEME;
+  const newTheme = currentTheme === LIGHT_THEME ? DARK_THEME : LIGHT_THEME;
+  setTheme(newTheme);
+});
+
+
 // ===== Preloader =====
 window.addEventListener('load', () => {
   const preloader = document.querySelector('.preloader');
@@ -58,7 +112,7 @@ class Particle {
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(29, 78, 216, ${this.opacity * 0.5})`;
+    ctx.fillStyle = `rgba(${particleFillColor}, ${this.opacity * 0.5})`;
     ctx.fill();
   }
 }
@@ -81,7 +135,7 @@ function drawConnections() {
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(29, 78, 216, ${opacity})`;
+        ctx.strokeStyle = `rgba(${particleStrokeColor}, ${opacity})`;
         ctx.lineWidth = 0.5;
         ctx.stroke();
       }
