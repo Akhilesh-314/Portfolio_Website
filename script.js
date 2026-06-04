@@ -58,7 +58,7 @@ class Particle {
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(108, 99, 255, ${this.opacity})`;
+    ctx.fillStyle = `rgba(29, 78, 216, ${this.opacity * 0.5})`;
     ctx.fill();
   }
 }
@@ -77,11 +77,11 @@ function drawConnections() {
       const distance = Math.sqrt(dx * dx + dy * dy);
 
       if (distance < 150) {
-        const opacity = (1 - distance / 150) * 0.12;
+        const opacity = (1 - distance / 150) * 0.1;
         ctx.beginPath();
         ctx.moveTo(particles[i].x, particles[i].y);
         ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(108, 99, 255, ${opacity})`;
+        ctx.strokeStyle = `rgba(29, 78, 216, ${opacity})`;
         ctx.lineWidth = 0.5;
         ctx.stroke();
       }
